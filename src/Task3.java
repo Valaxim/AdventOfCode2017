@@ -3,10 +3,7 @@ Day 3 - 2017 Advent of Code
 http://adventofcode.com/2017/day/3
 */
 
-
-import javax.sound.midi.SysexMessage;
 import java.util.Arrays;
-
 
 class Spiral {
 
