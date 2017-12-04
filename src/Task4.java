@@ -13,7 +13,7 @@ public class Task4 {
 
         // @@ part1
         for (String k : splitString) {
-            Set<String> set = new TreeSet<>();
+            Set<String> set = new HashSet<>();
             String[] temp = k.split(" ");
             for (String a : temp) {
                 set.add(a);
@@ -27,7 +27,7 @@ public class Task4 {
         // @@ part 2
         valid = 0;
         for (String k : splitString) {
-            Set<String> set = new TreeSet<>();
+            Set<String> set = new HashSet<>();
             String[] temp = k.split(" ");
             for (String a : temp) {
                 char[] chars = a.toCharArray();
@@ -38,7 +38,7 @@ public class Task4 {
                     valid++;
             }
         }
-        System.out.println("Part 1 answer: " + valid);
+        System.out.println("Part 2 answer: " + valid);
     }
 
     String input = "una bokpr ftz ryw nau yknf fguaczl anu\n" +
