@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Task8 {
 
     static String input;
-    static int temporaryMaxValue=0;
+    static int temporaryMaxValue = 0;
 
     static String readFile(String fileName) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(fileName));
@@ -102,9 +102,8 @@ public class Task8 {
                 default:
                     break;
             }
-            temporaryMaxValue = Collections.max(map.values()) > temporaryMaxValue ? Collections.max(map.values()) : temporaryMaxValue;
+            temporaryMaxValue = Math.max(temporaryMaxValue, Collections.max(map.values()));
         }
-
         System.out.println("Max value is: " + Collections.max(map.values()));
         System.out.println("Temporary Max value is: " + temporaryMaxValue);
     }
