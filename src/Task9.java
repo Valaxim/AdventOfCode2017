@@ -9,14 +9,14 @@ import java.util.Scanner;
 public class Task9 {
 
     static int nonCancelledChar=0;
-    static int steps = 0;
     static String input;
 
     static String readFile(String fileName) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(fileName));
         StringBuilder builder = new StringBuilder();
-        while (scanner.hasNext()) {
-            builder.append(scanner.next());
+        while (scanner.hasNextLine()) {
+            builder.append(scanner.nextLine());
+            builder.append("\n");
         }
         return builder.toString();
     }
