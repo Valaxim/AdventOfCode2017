@@ -18,9 +18,9 @@ class Spiral {
     }
 
     public static void removeNullFromSpiral(String[][] tab) {
-        for (int i =0 ; i< tab.length; i++) {
-            for (int j =0 ; j< tab.length; j++) {
-                tab[i][j] = (tab[i][j]==null ? "0000000" : tab[i][j]);
+        for (int i = 0; i < tab.length; i++) {
+            for (int j = 0; j < tab.length; j++) {
+                tab[i][j] = (tab[i][j] == null ? "0000000" : tab[i][j]);
             }
         }
     }
@@ -34,7 +34,6 @@ class Spiral {
         while (j <= ((n * n) - 1 + i)) {
             int sum = 0;
             try {
-                sum = 0;
                 if (spiral[y - 1][x - 1] != null)
                     sum += Integer.parseInt(spiral[y - 1][x - 1].trim());
                 if (spiral[y - 1][x] != null)
@@ -56,14 +55,13 @@ class Spiral {
                 } else {
                     spiral[y][x] = String.format("%7d", sum);
                 }
-                if( Integer.parseInt(spiral[y][x].trim())>=input) {
+                if (Integer.parseInt(spiral[y][x].trim()) >= input) {
                     System.out.println(spiral[y][x]);
                     return spiral;
                 }
 
 
             } catch (Exception e) {
-                sum += 0;
                 spiral[y][x] = String.format("%7d", 0000000);
             }
             switch (dir) {
@@ -129,7 +127,6 @@ public class Task3 {
 
     public static void main(String[] argv) {
         firstTask();
-
         String[][] spiral = Spiral.genSpiral(11);
         Spiral.removeNullFromSpiral(spiral);
         for (String[] row : spiral) {
